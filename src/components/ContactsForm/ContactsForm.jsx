@@ -1,26 +1,11 @@
 import { Formik, Field, Form, ErrorMessage } from 'formik';
-import * as Yup from 'yup';
 import { useDispatch, useSelector } from 'react-redux';
 
 import { selectContacts } from 'redux/contacts/selectors';
+import { addContact } from 'redux/contacts/operations';
+import { ContactsSchema } from 'helpers/validationSchemas/contactsSchema';
 
 import styles from './ContactsForm.module.css';
-import { addContact } from 'redux/contacts/operations';
-
-const phoneRegex =
-  /^\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}$/;
-const phoneError =
-  'Phone number must be digits and can contain spaces, dashes, parentheses and can start with +';
-
-const ContactsSchema = Yup.object().shape({
-  name: Yup.string()
-    .min(2, 'Too Short!')
-    .max(20, 'Too Long!')
-    .required('Please, enter contact name'),
-  number: Yup.string()
-    .matches(phoneRegex, phoneError)
-    .required('Please, enter phone number'),
-});
 
 export const ContactsForm = () => {
   const contacts = useSelector(selectContacts);

@@ -16,13 +16,12 @@
   transform: translate(-50%, -50%);
 
   width: 500px;
-
-  height: 400px;
+  height: 346px;
 }
 
 .btn {
   position: absolute;
-  top: 15px;
+  top: 10px;
   right: 15px;
 
   width: 40px;

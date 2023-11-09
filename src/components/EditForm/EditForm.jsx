@@ -1,55 +1,55 @@
 import { useDispatch } from 'react-redux';
-import { useState } from 'react';
+import { ErrorMessage, Field, Formik, Form } from 'formik';
 import PropTypes from 'prop-types';
 
 import { editContact } from 'redux/contacts/operations';
+import { ContactsSchema } from 'helpers/validationSchemas/contactsSchema';
 
 import styles from './EditForm.module.css';
 
 export const EditForm = ({ onClose, id, name, number }) => {
-  const [nameToEdit, setNameToEdit] = useState(name);
-  const [numberToEdit, setNumberToEdit] = useState(number);
-
-  const handleNameChange = e => setNameToEdit(e.target.value);
-  const handleNumberChange = e => setNumberToEdit(e.target.value);
-
   const dispatch = useDispatch();
 
-  const handleSubmit = e => {
-    e.preventDefault();
-    dispatch(editContact({ id, name: nameToEdit, number: numberToEdit }));
+  const handleSubmit = (values, action) => {
+    dispatch(editContact({ id, ...values }));
     onClose();
-    e.target.reset();
+    action.resetForm();
   };
 
   return (
-    <div className={styles.container}>
-      <form className={styles.form} onSubmit={handleSubmit} autoComplete="off">
+    <Formik
+      initialValues={{
+        name,
+        number,
+      }}
+      validationSchema={ContactsSchema}
+      onSubmit={handleSubmit}
+    >
+      <Form className={styles.form} autoComplete="off">
         <label className={styles.label}>
-          Username
-          <input
-            type="text"
+          Name
+          <Field className={styles.input} type="text" name="name" required />
+          <ErrorMessage
+            className={styles.errorName}
             name="name"
-            value={nameToEdit}
-            onChange={handleNameChange}
-            required
+            component="span"
           />
         </label>
 
         <label className={styles.label}>
           Number
-          <input
-            type="tel"
+          <Field className={styles.input} type="tel" name="number" required />
+          <ErrorMessage
+            className={styles.errorNumber}
             name="number"
-            value={numberToEdit}
-            onChange={handleNumberChange}
-            required
+            component="span"
           />
         </label>
-
-        <button className={styles.btn}>EDIT CONTACT</button>
-      </form>
-    </div>
+        <button className={styles.btn} type="submit">
+          EDIT CONTACT
+        </button>
+      </Form>
+    </Formik>
   );
 };
 
