@@ -1,0 +1,20 @@
+.label {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+
+  font-size: 20px;
+  font-weight: 700;
+  color: rgb(254, 254, 236);
+}
+
+.input {
+  padding-left: 20px;
+  width: 200px;
+  height: 40px;
+  border-radius: 10px;
+
+  font-size: 20px;
+}

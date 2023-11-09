@@ -1,0 +1,15 @@
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80px;
+
+  background-color: black;
+}
+
+.text {
+  font-size: 20px;
+  letter-spacing: 0.05em;
+
+  color: aliceblue;
+}

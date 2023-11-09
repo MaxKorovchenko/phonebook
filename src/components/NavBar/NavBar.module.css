@@ -1,0 +1,30 @@
+.wrapper {
+  display: flex;
+  gap: 40px;
+}
+
+.link {
+  padding: 10px 14px;
+  outline: 1px solid black;
+  border-radius: 6px;
+
+  font-weight: 700;
+  font-size: 18px;
+  background-color: aliceblue;
+  color: blue;
+  user-select: none;
+
+  transition: 250ms ease-in-out;
+
+  &:hover {
+    background-color: rgb(55, 55, 224);
+    color: aliceblue;
+  }
+
+  &:global(.active) {
+    background-color: blue;
+    color: aliceblue;
+
+    box-shadow: 2px 2px 10px 5px gray;
+  }
+}
