@@ -1,5 +1,7 @@
 import { useDispatch } from 'react-redux';
 import { useState } from 'react';
+import PropTypes from 'prop-types';
+
 import { editContact } from 'redux/contacts/operations';
 
 import styles from './EditForm.module.css';
@@ -49,4 +51,11 @@ export const EditForm = ({ onClose, id, name, number }) => {
       </form>
     </div>
   );
+};
+
+EditForm.propTypes = {
+  onClose: PropTypes.func,
+  id: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  number: PropTypes.string.isRequired,
 };

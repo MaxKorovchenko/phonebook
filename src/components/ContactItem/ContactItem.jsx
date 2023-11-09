@@ -1,12 +1,13 @@
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { ClipLoader } from 'react-spinners';
+import PropTypes from 'prop-types';
 
 import { deleteContact } from 'redux/contacts/operations';
-
-import styles from './ContactItem.module.css';
 import { Modal } from 'components/Modal/Modal';
 import { EditForm } from 'components/EditForm/EditForm';
+
+import styles from './ContactItem.module.css';
 
 export const ContactItem = ({ id, name, number }) => {
   const [showModal, setShowModal] = useState(false);
@@ -55,4 +56,10 @@ export const ContactItem = ({ id, name, number }) => {
       )}
     </>
   );
+};
+
+ContactItem.propTypes = {
+  id: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  number: PropTypes.string.isRequired,
 };

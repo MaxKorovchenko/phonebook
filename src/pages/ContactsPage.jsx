@@ -35,7 +35,7 @@ const ContactsPage = () => {
 
   return (
     <div style={styles.container}>
-      <h1 style={styles.title}>PHONEBOOK APP</h1>
+      <h1 style={styles.title}>PHONEBOOK</h1>
       <ContactsForm />
       <Filter />
 
