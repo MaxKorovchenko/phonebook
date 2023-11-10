@@ -15,7 +15,7 @@
 .label {
   display: flex;
   flex-direction: column;
-  gap: 6px;
+  gap: 4px;
 
   margin-bottom: 25px;
 
@@ -58,7 +58,7 @@
   top: 108px;
   left: 32px;
 
-  color: red;
+  color: salmon;
   font-size: 16px;
 }
 
@@ -67,6 +67,6 @@
   top: 208px;
   left: 32px;
 
-  color: red;
+  color: salmon;
   font-size: 16px;
 }
