@@ -1,0 +1,41 @@
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.wrapper {
+  display: flex;
+  gap: 100px;
+}
+
+h1 {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  font-size: 3em;
+  color: #cad2e7;
+  letter-spacing: 5px;
+  text-align: center;
+}
+
+.textWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.text {
+  margin-bottom: 30px;
+  font-size: 30px;
+  letter-spacing: 2px;
+  color: #e8ebee;
+  line-height: 1.5;
+}
+
+.image {
+  width: 600px;
+  height: 600px;
+
+  border: 1px solid aliceblue;
+  border-radius: 20px;
+  box-shadow: 2px 2px 15px 2px white;
+}
