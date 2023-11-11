@@ -1,5 +1,7 @@
 import { Formik, Field, Form, ErrorMessage } from 'formik';
 import { useDispatch, useSelector } from 'react-redux';
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 import { selectContacts } from 'redux/contacts/selectors';
 import { addContact } from 'redux/contacts/operations';
@@ -13,10 +15,22 @@ export const ContactsForm = () => {
 
   const handleSubmit = (values, action) => {
     if (contacts.find(contact => contact.name === values.name)) {
-      return alert(`${values.name} is already in contacts.`);
+      return toast.error(`${values.name} is already in contacts.`);
     }
 
-    dispatch(addContact(values));
+    dispatch(addContact(values))
+      .then(res => {
+        if (res.meta.requestStatus === 'rejected') {
+          throw new Error('Failed to add contact. Please try again.');
+        }
+        toast.success(
+          `${res.payload.name} successfully added to your phonebook.`
+        );
+      })
+      .catch(e => {
+        toast.error(e.message);
+      });
+
     action.resetForm();
   };
 

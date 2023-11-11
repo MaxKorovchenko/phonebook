@@ -1,8 +1,10 @@
+import { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { ToastContainer } from 'react-toastify';
+
 import { ContactsForm } from 'components/ContactsForm/ContactsForm';
 import { ContactsList } from 'components/ContactsList/ContactsList';
 import { Filter } from 'components/Filter/Filter';
-import { useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
 import { getAllContacts } from 'redux/contacts/operations';
 import { selectError } from 'redux/contacts/selectors';
 
@@ -52,6 +54,19 @@ const ContactsPage = () => {
         </h2>
       )}
       <ContactsList />
+
+      <ToastContainer
+        position="top-right"
+        autoClose={2500}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="white"
+      />
     </div>
   );
 };
