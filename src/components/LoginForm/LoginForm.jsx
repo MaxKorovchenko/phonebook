@@ -27,7 +27,7 @@ export const LoginForm = () => {
         validationSchema={LoginSchema}
         onSubmit={handleSubmit}
       >
-        <Form className={styles.form} autoComplete="off">
+        <Form className={styles.form} autoComplete="on">
           <label className={styles.label}>
             Email
             <Field className={styles.input} type="email" name="email" />
