@@ -12,7 +12,6 @@ import styles from './ContactsPage.module.css';
 
 const ContactsPage = () => {
   const error = useSelector(selectError);
-
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -32,14 +31,7 @@ const ContactsPage = () => {
       </div>
 
       {error && (
-        <h2
-          style={{
-            textAlign: 'center',
-            fontSize: 24,
-            color: 'aliceblue',
-            padding: 20,
-          }}
-        >
+        <h2 className={styles.error}>
           Something went wrong 😥. Try again later
         </h2>
       )}
