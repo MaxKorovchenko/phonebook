@@ -8,23 +8,7 @@ import { Filter } from 'components/Filter/Filter';
 import { getAllContacts } from 'redux/contacts/operations';
 import { selectError } from 'redux/contacts/selectors';
 
-const styles = {
-  container: {
-    width: 800,
-    margin: '20px auto',
-    padding: 20,
-    boxShadow: '1px 1px 10px 5px rgb(224, 213, 213)',
-    backgroundColor: 'rgb(61, 50, 160)',
-  },
-
-  title: {
-    marginBottom: 30,
-    color: 'aliceblue',
-    textAlign: 'center',
-    letterSpacing: '0.03em',
-    textShadow: '2px 2px 10px rgb(1, 10, 13)',
-  },
-};
+import styles from './ContactsPage.module.css';
 
 const ContactsPage = () => {
   const error = useSelector(selectError);
@@ -36,12 +20,18 @@ const ContactsPage = () => {
   }, [dispatch]);
 
   return (
-    <div style={styles.container}>
-      <h1 style={styles.title}>PHONEBOOK</h1>
-      <ContactsForm />
-      <Filter />
+    <div className={styles.container}>
+      <h2 className={styles.title}>CONTACTS</h2>
+      <div className={styles.wrapper}>
+        <div>
+          <ContactsForm />
+          <Filter />
+        </div>
 
-      {error && (
+        <ContactsList />
+      </div>
+
+      {/* {error && (
         <h2
           style={{
             textAlign: 'center',
@@ -52,8 +42,7 @@ const ContactsPage = () => {
         >
           something went wrong 😥
         </h2>
-      )}
-      <ContactsList />
+      )} */}
 
       <ToastContainer
         position="top-right"

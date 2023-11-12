@@ -21,7 +21,6 @@ export const ContactsList = () => {
 
   return (
     <section className={styles.section}>
-      <h2 className={styles.title}>Contacts</h2>
       <ul>
         {visibleContacts.map(({ id, name, number }) => (
           <li className={styles.item} key={id}>
