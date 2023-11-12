@@ -2,7 +2,7 @@ import { NavLink } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 
 import { selectIsLoggedIn } from 'redux/auth/selectors';
-import logo from 'assets/images/logo2.png';
+import logo from 'assets/images/logo.png';
 
 import styles from './NavBar.module.css';
 

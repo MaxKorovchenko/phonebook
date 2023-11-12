@@ -4,7 +4,7 @@ import styles from './HomePage.module.css';
 const HomePage = () => {
   return (
     <div className={styles.container}>
-      <h1>Welcome to Your Phonebook!</h1>
+      {/* <h1>Welcome to Your Phonebook!</h1>
       <div className={styles.wrapper}>
         <div className={styles.textWrapper}>
           <p className={styles.text}>
@@ -22,7 +22,7 @@ const HomePage = () => {
         </div>
 
         <img className={styles.image} src={phonebook} alt="phonebook" />
-      </div>
+      </div> */}
     </div>
   );
 };

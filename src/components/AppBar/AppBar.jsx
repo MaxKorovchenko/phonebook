@@ -1,21 +1,19 @@
-import { useSelector } from 'react-redux';
+import { useMediaQuery } from 'react-responsive';
 
-import { AuthNav } from 'components/AuthNav/AuthNav';
-import { NavBar } from 'components/NavBar/NavBar';
-import { UserMenu } from 'components/UserMenu/UserMenu';
-import { selectIsLoggedIn } from 'redux/auth/selectors';
+import { MobileBar } from 'components/MobileBar/MobileBar';
+import { DesktopBar } from 'components/DesktopBar/DesktopBar';
 
 import styles from './AppBar.module.css';
 
 export const AppBar = () => {
-  const isLoggedIn = useSelector(selectIsLoggedIn);
+  const isMobile = useMediaQuery({ maxWidth: 767 });
+  const isDesktop = useMediaQuery({ minWidth: 768 });
 
   return (
     <div className={styles.wrapper}>
       <div className={styles.container}>
-        <NavBar />
-
-        {isLoggedIn ? <UserMenu /> : <AuthNav />}
+        {isMobile && <MobileBar />}
+        {isDesktop && <DesktopBar />}
       </div>
     </div>
   );
