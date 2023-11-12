@@ -21,13 +21,17 @@ export const ContactsList = () => {
 
   return (
     <section className={styles.section}>
-      <ul>
-        {visibleContacts.map(({ id, name, number }) => (
-          <li className={styles.item} key={id}>
-            <ContactItem id={id} name={name} number={number} />
-          </li>
-        ))}
-      </ul>
+      {contacts.length > 0 ? (
+        <ul>
+          {visibleContacts.map(({ id, name, number }) => (
+            <li className={styles.item} key={id}>
+              <ContactItem id={id} name={name} number={number} />
+            </li>
+          ))}
+        </ul>
+      ) : (
+        <p className={styles.message}>Your contacts will be here</p>
+      )}
     </section>
   );
 };

@@ -4,8 +4,10 @@ import { setFilter } from 'redux/filter/slice';
 import { selectFilter } from 'redux/filter/selectors';
 
 import styles from './Filter.module.css';
+import { selectContacts } from 'redux/contacts/selectors';
 
 export const Filter = () => {
+  const contacts = useSelector(selectContacts);
   const filter = useSelector(selectFilter);
   const dispatch = useDispatch();
 
@@ -17,6 +19,7 @@ export const Filter = () => {
         type="text"
         value={filter}
         onChange={e => dispatch(setFilter(e.target.value))}
+        placeholder={`Total contacts: ${contacts.length}`}
         autoComplete="off"
       />
     </label>

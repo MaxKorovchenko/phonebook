@@ -31,7 +31,7 @@ const ContactsPage = () => {
         <ContactsList />
       </div>
 
-      {/* {error && (
+      {error && (
         <h2
           style={{
             textAlign: 'center',
@@ -40,9 +40,9 @@ const ContactsPage = () => {
             padding: 20,
           }}
         >
-          something went wrong 😥
+          Something went wrong 😥. Try again later
         </h2>
-      )} */}
+      )}
 
       <ToastContainer
         position="top-right"
