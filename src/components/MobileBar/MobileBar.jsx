@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { GiHamburgerMenu } from 'react-icons/gi';
 import { AiOutlineClose } from 'react-icons/ai';
 
@@ -9,6 +9,10 @@ import { MobileMenu } from 'components/MobileMenu/MobileMenu';
 
 export const MobileBar = () => {
   const [showMenu, setShowMenu] = useState(false);
+
+  useEffect(() => {
+    document.body.style.overflow = showMenu ? 'hidden' : 'auto';
+  }, [showMenu]);
 
   return (
     <div className={styles.wrapper}>
