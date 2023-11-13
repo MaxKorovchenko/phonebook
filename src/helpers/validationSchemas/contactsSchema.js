@@ -8,7 +8,7 @@ const phoneError =
 export const ContactsSchema = Yup.object().shape({
   name: Yup.string()
     .min(2, 'Too Short!')
-    .max(50, 'Too Long!')
+    .max(30, 'Too Long!')
     .required('Please, enter contact name'),
   number: Yup.string()
     .matches(phoneRegex, phoneError)
