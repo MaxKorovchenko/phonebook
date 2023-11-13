@@ -46,7 +46,7 @@ const ContactsPage = () => {
         pauseOnFocusLoss
         draggable
         pauseOnHover
-        theme="white"
+        theme="colored"
       />
     </div>
   );

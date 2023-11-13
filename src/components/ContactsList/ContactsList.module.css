@@ -1,6 +1,15 @@
 .section {
-  width: 700px;
+  max-width: 550px;
   margin: 0 auto;
+
+  @media (min-width: 768px) {
+    max-width: 768px;
+  }
+
+  @media (min-width: 1200px) {
+    max-width: 700px;
+    width: 700px;
+  }
 }
 
 .item {
@@ -12,8 +21,12 @@
   padding: 6px;
   border-bottom: 1px solid grey;
   color: rgb(236, 236, 242);
-  font-size: 24px;
+  font-size: 20px;
   font-weight: 700;
+
+  @media (min-width: 768px) {
+    font-size: 24px;
+  }
 }
 
 .message {

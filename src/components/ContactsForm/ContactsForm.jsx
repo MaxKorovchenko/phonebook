@@ -23,9 +23,7 @@ export const ContactsForm = () => {
         if (res.meta.requestStatus === 'rejected') {
           throw new Error('Failed to add contact. Please try again.');
         }
-        toast.success(
-          `${res.payload.name} successfully added to your phonebook.`
-        );
+        toast.info(`${res.payload.name} successfully added to your phonebook.`);
       })
       .catch(e => {
         toast.error(e.message);
