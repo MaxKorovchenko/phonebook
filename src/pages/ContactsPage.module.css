@@ -27,7 +27,7 @@
   color: aliceblue;
   text-align: center;
   letter-spacing: 0.1em;
-  text-shadow: 2px 2px 10px rgb(1, 10, 13);
+  text-shadow: 2px 2px 10px #010a0d;
 
   @media (min-width: 768px) {
     margin-bottom: 25px;

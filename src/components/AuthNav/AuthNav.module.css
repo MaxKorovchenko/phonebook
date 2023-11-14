@@ -23,7 +23,7 @@
   transition: 250ms ease-in-out;
 
   &:hover {
-    background-color: rgb(55, 55, 224);
+    background-color: #3737e0;
     color: aliceblue;
   }
 

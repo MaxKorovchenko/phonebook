@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import { createPortal } from 'react-dom';
+import PropTypes from 'prop-types';
 
 import { selectIsLoggedIn } from 'redux/auth/selectors';
 import { UserMenu } from 'components/UserMenu/UserMenu';
@@ -41,4 +42,8 @@ export const MobileMenu = ({ onClose }) => {
     </div>,
     mobileRoot
   );
+};
+
+MobileMenu.propTypes = {
+  onClose: PropTypes.func.isRequired,
 };

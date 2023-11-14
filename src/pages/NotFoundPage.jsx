@@ -1,12 +1,12 @@
 const styles = {
   number: {
-    fontSize: 150,
+    fontSize: 120,
     color: 'aliceblue',
     textAlign: 'center',
-    marginTop: 200,
+    marginTop: 100,
   },
   title: {
-    fontSize: 50,
+    fontSize: 45,
     color: 'aliceblue',
     textAlign: 'center',
   },

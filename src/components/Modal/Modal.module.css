@@ -34,6 +34,6 @@
   transition: 250ms ease-in-out;
 
   &:hover {
-    color: rgb(255, 98, 0);
+    color: #ff6200;
   }
 }

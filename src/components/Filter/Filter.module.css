@@ -3,12 +3,13 @@
   align-items: center;
   justify-content: center;
   gap: 8px;
+
   width: 100%;
   margin-bottom: 20px;
 
   font-size: 20px;
   font-weight: 700;
-  color: rgb(254, 254, 236);
+  color: #fefeec;
 }
 
 .input {
@@ -16,6 +17,5 @@
   width: 200px;
   height: 40px;
   border-radius: 10px;
-
   font-size: 20px;
 }
