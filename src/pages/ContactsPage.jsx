@@ -1,6 +1,5 @@
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { ToastContainer } from 'react-toastify';
 
 import { ContactsForm } from 'components/ContactsForm/ContactsForm';
 import { ContactsList } from 'components/ContactsList/ContactsList';
@@ -35,19 +34,6 @@ const ContactsPage = () => {
           Something went wrong 😥. Try again later
         </h2>
       )}
-
-      <ToastContainer
-        position="top-right"
-        autoClose={2500}
-        hideProgressBar={false}
-        newestOnTop={false}
-        closeOnClick
-        rtl={false}
-        pauseOnFocusLoss
-        draggable
-        pauseOnHover
-        theme="colored"
-      />
     </div>
   );
 };

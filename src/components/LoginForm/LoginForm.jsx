@@ -1,6 +1,8 @@
 import { Link } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { ErrorMessage, Field, Formik, Form } from 'formik';
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 import { login } from 'redux/auth/operations';
 import { LoginSchema } from 'helpers/validationSchemas/loginSchema';
@@ -11,7 +13,16 @@ export const LoginForm = () => {
   const dispatch = useDispatch();
 
   const handleSubmit = (values, action) => {
-    dispatch(login(values));
+    dispatch(login(values))
+      .then(res => {
+        if (res.meta.requestStatus === 'rejected') {
+          throw new Error('Invalid email or password');
+        }
+        toast.info(`Welcome ${res.payload.user.name}`);
+      })
+      .catch(e => {
+        toast.error(e.message);
+      });
 
     action.resetForm();
   };
@@ -49,7 +60,7 @@ export const LoginForm = () => {
           </label>
 
           <button className={styles.btn} type="submit">
-            CREATE ACCOUNT
+            LOGIN
           </button>
 
           <div className={styles.signWrapper}>

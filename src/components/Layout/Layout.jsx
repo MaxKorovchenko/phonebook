@@ -1,5 +1,6 @@
 import { Suspense } from 'react';
 import { Outlet } from 'react-router-dom';
+import { ToastContainer } from 'react-toastify';
 
 import { AppBar } from 'components/AppBar/AppBar';
 import { Footer } from 'components/Footer/Footer';
@@ -22,6 +23,19 @@ export const Layout = () => {
       </main>
 
       <Footer />
+
+      <ToastContainer
+        position="top-right"
+        autoClose={2500}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="colored"
+      />
     </div>
   );
 };

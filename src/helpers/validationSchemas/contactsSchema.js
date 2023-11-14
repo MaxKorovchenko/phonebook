@@ -6,10 +6,7 @@ const phoneError =
   'Valid phone numbers may consist of digits, spaces, dashes, parentheses, and may start with a plus sign';
 
 export const ContactsSchema = Yup.object().shape({
-  name: Yup.string()
-    .min(2, 'Too Short!')
-    .max(30, 'Too Long!')
-    .required('Please, enter contact name'),
+  name: Yup.string().min(2).max(30).required('Please, enter contact name'),
   number: Yup.string()
     .matches(phoneRegex, phoneError)
     .required('Please, enter phone number'),
