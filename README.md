@@ -1,70 +1,102 @@
-# Getting Started with Create React App
+# Phonebook App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a simple React.js Phonebook App with various features for managing
+contacts. The app is designed to be responsive, offering a seamless experience
+on different devices. Below is an overview of the features and the structure of
+the app.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- **Pages**:
 
-### `npm start`
+  - Home: Introduces the app and its benefits.
+  - Contacts: Displays a list of contacts, allows creation, deletion, and
+    editing of contacts. Includes a filter input to search for contacts by name.
+  - Login: User authentication page.
+  - Register: User registration page.
+  - NotFound: Displays a 404 page for non-existing routes.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **Validation**:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+  - Email and password validation on the login and register pages.
+  - Contact creation form includes validation for contact information.
 
-### `npm test`
+- **Backend**:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+  - Utilizes a public backend that supports contact collection operations, user
+    registration, login, and updates using JWT authentication.
 
-### `npm run build`
+- **Layouts**:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+  - Responsive design for mobile, tablet, and desktop layouts.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- **Redux**:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+  - Global state management using Redux for efficient data flow.
 
-### `npm run eject`
+- **Persist**:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+  - Implements data persistence to save JWT tokens for seamless user experience.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- **Public and Private Routes**:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+  - Configured public and private routes to control access to pages. For
+    example, only registered users can access the Contacts page.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- **Code Splitting and Lazy Loading**:
 
-## Learn More
+  - Optimize performance by implementing code splitting and lazy loading for
+    pages. Only load the necessary code chunks when required, enhancing the
+    overall user experience.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- **User Actions**:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+  - Provides notifications for different user actions, enhancing user
+    experience.
 
-### Code Splitting
+### Getting Started
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+1. Clone the repository.
+2. Install dependencies: npm install.
+3. Run the app: npm start.
 
-### Analyzing the Bundle Size
+Make sure to replace the public backend URL with your backend URL if needed.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### Usage
 
-### Making a Progressive Web App
+1. **Home Page**:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+   - Describes the benefits and features of the app.
 
-### Advanced Configuration
+2. **Contacts Page**:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+   - Displays a list of contacts.
+   - Create, edit, and delete contacts.
+   - Filter contacts by name.
 
-### Deployment
+3. **Login Page**:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+   - Authenticate with your email and password.
 
-### `npm run build` fails to minify
+4. **Register Page**:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+   - Create a new user account.
+
+5. **NotFound Page**:
+
+   - Displays a 404 page for non-existing routes.
+
+### Technologies Used
+
+- React.js
+- Redux
+- React Router
+- JWT Authentication
+- Responsive Design
+- Notification Library
+
+### Acknowledgments
+
+Special thanks to the developers of the public backend used in this app.
+
+Feel free to explore and customize the app according to your needs!
