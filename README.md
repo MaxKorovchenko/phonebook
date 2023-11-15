@@ -5,6 +5,16 @@ contacts. The app is designed to be responsive, offering a seamless experience
 on different devices. Below is an overview of the features and the structure of
 the app.
 
+## Screenshots
+
+#### Home Page
+
+<img src="./src/assets/images/Screenshot_1.jpg" alt="Home Page" width="500">
+
+#### Contacts Page
+
+<img src="./src/assets/images/Screenshot_2.jpg" alt="Contacts Page" width="500">
+
 ## Features
 
 - **Pages**:
@@ -25,6 +35,8 @@ the app.
 
   - Utilizes a public backend that supports contact collection operations, user
     registration, login, and updates using JWT authentication.
+  - For detailed API documentation, read the
+    [documentation](https://connections-api.herokuapp.com/docs/).
 
 - **Layouts**:
 
@@ -97,6 +109,6 @@ Make sure to replace the public backend URL with your backend URL if needed.
 
 ### Acknowledgments
 
-Special thanks to the developers of the public backend used in this app.
+Special thanks to the developers of the public backend used in this app!
 
 Feel free to explore and customize the app according to your needs!
