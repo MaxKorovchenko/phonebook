@@ -8,6 +8,10 @@ body {
   font-family: sans-serif;
   line-height: 1.5;
   margin: 0;
+
+  @media (min-width: 768px) {
+    overflow: auto !important;
+  }
 }
 
 h1,
