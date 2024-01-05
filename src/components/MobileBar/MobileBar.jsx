@@ -23,6 +23,7 @@ export const MobileBar = () => {
           className={styles.btn}
           type="button"
           onClick={() => setShowMenu(false)}
+          aria-label="Close Menu"
         >
           <AiOutlineClose color={'aliceblue'} size={40} />
         </button>
@@ -31,6 +32,7 @@ export const MobileBar = () => {
           className={styles.btn}
           type="button"
           onClick={() => setShowMenu(true)}
+          aria-label="Open Menu"
         >
           <GiHamburgerMenu color={'aliceblue'} size={40} />
         </button>
